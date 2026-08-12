@@ -25,7 +25,7 @@
 | 1 | 位姿描述与齐次变换 | 02（MJCF 建模）、03（读取 qpos）、05（FK 数据对比） |
 | 2 | 正向运动学 DH-FK | 02、03、05 |
 | 3 | 逆向运动学 | 03（写 qpos）、05（雅可比）、07（关节控制） |
-| 4 | 速度运动学与雅可比 | 05（mj_jac / mj_objectVelocity / JᵀF） |
+| 4 | 速度运动学与雅可比 | 05（mj_jac / mj_objectVelocity / $J^{\mathsf{T}}F$） |
 | 5 | 动力学（拉格朗日） | 06（mj_inverse / mj_fullM） |
 | 6 | PD / 计算力矩 / 阻抗控制 | 07（控制与力施加） |
 | 7 | 轨迹规划 | 07（position 执行器轨迹跟踪） |
@@ -54,7 +54,7 @@
 | [02_MJCF建模语言.md](02_MJCF建模语言.md) | 用 XML 描述机器人：body/geom/joint/site/actuator |
 | [03_核心PythonAPI.md](03_核心PythonAPI.md) | MjModel/MjData、mj_step 循环、命名访问、numpy 内存语义 |
 | [04_可视化.md](04_可视化.md) | viewer 三种模式、Simulate 程序、离屏渲染 |
-| [05_运动学与雅可比.md](05_运动学与雅可比.md) | 读状态算 FK、mj_jac、mj_objectVelocity、τ=JᵀF 验证 |
+| [05_运动学与雅可比.md](05_运动学与雅可比.md) | 读状态算 FK、mj_jac、mj_objectVelocity、$\tau = J^{\mathsf{T}}F$ 验证 |
 | [06_动力学接口.md](06_动力学接口.md) | mj_inverse 逆动力学、mj_fullM 质量矩阵（3.11 新签名）、接触力 |
 | [07_控制与力施加.md](07_控制与力施加.md) | 执行器与 ctrl、内置 PD、手写 PD、外力施加 |
 | [08_传感器与数据采集.md](08_传感器与数据采集.md) | sensor 定义、sensordata 布局、接触信息、数据记录 |

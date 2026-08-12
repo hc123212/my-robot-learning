@@ -13,7 +13,7 @@
 | **og_bruce** | https://github.com/alvister88/og_bruce | 在 MuJoCo MJCF 中建模并联机构（四杆、五杆、差速齿轮）的教程型仓库，11★ | 罕见的"如何在 MJCF 原生建五杆闭链约束"代码（闭链用 MuJoCo 原生约束而非串联近似），配套论文 arXiv:2507.00273（BRUCE 人形并联机构） |
 | **Wheel-Legged-Gym**（南方科技大学 Clear Lab） | https://github.com/clearlab-sustech/Wheel-Legged-Gym | 轮腿机器人 RL 训练框架（legged_gym + rsl_rl，Isaac Gym），630★ | 任务配置含 `wheel_legged_vmc_flat` 等 VMC 相关任务，2 腿轮腿完整训练/部署流程；RoboMaster 平衡步兵训练常用。后续想 RL 化时再看 |
 | **balance-robot-mujoco-sim** | https://github.com/lachlanhurst/balance-robot-mujoco-sim | 两轮自平衡机器人 MuJoCo 仿真 + LQR 控制器，PySide6 界面，30★ | 最小可运行的"MuJoCo 平衡闭环"模板（XML + LQR 回路 + 可视化），含 `calculate_lqr_gains.py`，适合作为控制循环起点 |
-| **Control-strategies-for-two-wheeled-inverted-pendulum** | https://github.com/Manas-arumalla/Control-strategies-for-two-wheeled-inverted-pendulum | 两轮倒立摆（Segway 型）15+ 控制策略对比：LQR、iLQR、MPC、H∞、SMC、backstepping 等，MATLAB 推导 + MuJoCo 验证，遗传算法整定 | 完整展示"平衡点线性化 → 控制器设计 → MuJoCo 验证"全流程；升级到 MPC/iLQR 的现成对照 |
+| **Control-strategies-for-two-wheeled-inverted-pendulum** | https://github.com/Manas-arumalla/Control-strategies-for-two-wheeled-inverted-pendulum | 两轮倒立摆（Segway 型）15+ 控制策略对比：LQR、iLQR、MPC、$H_\infty$、SMC、backstepping 等，MATLAB 推导 + MuJoCo 验证，遗传算法整定 | 完整展示"平衡点线性化 → 控制器设计 → MuJoCo 验证"全流程；升级到 MPC/iLQR 的现成对照 |
 | **Self-Balancing-Robot** | https://github.com/giulioturrisi/Self-Balancing-Robot | ROS2 两轮倒立摆控制全集：LQR、LQI、自适应 LQR、SMC、iLQR/Crocoddyl、NMPC/Acados、EKF，MuJoCo/CoppeliaSim 双仿真，58★ | 控制器家族最全，可参考 LQI/自适应 LQR 与 EKF 状态估计；缺点：ROS2 依赖重 |
 
 ## 第二梯队：VMC / 平衡控制器权威实现

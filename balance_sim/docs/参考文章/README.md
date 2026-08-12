@@ -22,12 +22,12 @@
    05_串联腿vs并联五杆轮腿_机构与控制对比 → 你的模型是闭链，与五杆资料同大类；平衡层/执行层分流原则
 
 ② 理论补强（1-2 天）
-   Pratt VMC 原始论文（02）→ 只需读"虚拟力 + Jᵀ 映射"核心两节
+   Pratt VMC 原始论文（02）→ 只需读"虚拟力 + $J^{\mathsf{T}}$ 映射"核心两节
    Tedrake Underactuated Robotics LQR 章节（02）→ 倒立摆线性化 + Q/R 选取
 
 ③ 方法对齐（对照你的 01_串联腿LQR_VMC平衡控制.md）
    官方 LQR.ipynb（04）→ mjd_transitionFD 线性化流程，与你手写差分互为验证
-   wheel-leg-climber VMC 推导（02）→ τ=JᵀF 公式落地，前后腿符号差异
+   wheel-leg-climber VMC 推导（02）→ $\tau = J^{\mathsf{T}}F$ 公式落地，前后腿符号差异
 
 ④ 同构代码精读（2-3 天，重点）
    RP_Balance（01/03）→ 五连杆解算 + LQR(K 随腿长) + VMC + A/B 矩阵拟合

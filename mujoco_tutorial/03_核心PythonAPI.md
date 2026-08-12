@@ -240,7 +240,7 @@ mujoco.mj_saveModel(model, "out.mjb")  # 模型存为二进制（MJCF 预编译�
 
 ## 本章练习
 
-1. 加载第 2 章的单摆模型，把摆角设成 0.5 rad，`mj_forward` 后打印 `data.site("pendulum_end").xpos`，手算验证：摆长 0.5m 时末端应在 (sin0.5, 0, 1−cos0.5)。
+1. 加载第 2 章的单摆模型，把摆角设成 0.5 rad，`mj_forward` 后打印 `data.site("pendulum_end").xpos`，手算验证：摆长 0.5m 时末端应在 $(\sin 0.5, 0, 1-\cos 0.5)$。
 2. 验证 `nq vs nv`：给单摆的底座加个 free 关节，重新打印 nq/nv，体会 4 元数多出的 1 个坐标。
 3. 故意去掉 `.copy()` 记录 qpos，跑完后打印 list 里前 3 个值——亲眼看看它们全部变成最后一帧的值（这个 bug 值得你亲手踩一次）。
 

@@ -142,7 +142,7 @@ q = data.joint("shoulder").qpos   # 标量数组，尺寸 = 该关节自由度
 />
 ```
 
-默认情况下质量**由几何体体积×density 自动计算**。阶段 5 你要手算 2 连杆的质量矩阵 M(q) 和 MuJoCo 对比，**必须搞清楚每个 geom 的质量和质心**，建议建模时显式写 `mass` 或用简单的 capsule 并自己心算验证。
+默认情况下质量**由几何体体积×density 自动计算**。阶段 5 你要手算 2 连杆的质量矩阵 $M(q)$ 和 MuJoCo 对比，**必须搞清楚每个 geom 的质量和质心**，建议建模时显式写 `mass` 或用简单的 capsule 并自己心算验证。
 
 **碰撞相关属性**（阶段 6 之后的行走、抓取才需要，先了解）：
 
@@ -188,14 +188,14 @@ site 是**没有质量、不碰撞**的坐标标记点，挂在某个 body 下�
 
 | 类型 | ctrl 含义 | 输出 |
 |---|---|---|
-| `motor` | 力矩/力 | τ = ctrl × gear |
-| `position` | 目标位置 | τ = kp×(ctrl−q) − kd×q̇（内置 PD） |
-| `velocity` | 目标速度 | τ = kv×(ctrl−q̇) |
+| `motor` | 力矩/力 | $\tau = ctrl \times gear$ |
+| `position` | 目标位置 | $\tau = k_p\times(ctrl-q) - k_d\times\dot{q}$（内置 PD） |
+| `velocity` | 目标速度 | $\tau = k_v\times(ctrl-\dot{q})$ |
 
 三个执行器对应你学习计划的三类实验：
-- 阶段 6 手写 PD / 计算力矩 → `motor`，自己在 Python 里算 τ 写 `data.ctrl`
+- 阶段 6 手写 PD / 计算力矩 → `motor`，自己在 Python 里算 $\tau$ 写 `data.ctrl`
 - 阶段 7 轨迹跟踪 → `position` 直接给目标角，或 `motor`+手写 PD
-- 阻抗控制 → `motor`（要自己算 JᵀF 形式的力），或 `general` 执行器（进阶）
+- 阻抗控制 → `motor`（要自己算 $J^{\mathsf{T}}F$ 形式的力），或 `general` 执行器（进阶）
 
 > 第 7 章会详细对比"内置 position 执行器"和"手写 PD"的差异——这是阶段 6 的重要理解点。
 
@@ -270,7 +270,7 @@ worldbody（世界）
 4. hinge 关节的 `axis` 写了吗？
 5. 机械臂关节 `limited="true"` + `range` 了吗？（不限位仿真会乱转）
 6. 末端位置建 `site` 了吗？
-7. 质量合理吗？（默认密度 1000，胶囊体积≈πr²L，自己心算一下对不对）
+7. 质量合理吗？（默认密度 1000，胶囊体积 $\approx \pi r^2 L$，自己心算一下对不对）
 8. 相邻连杆会互相碰撞吗？（不相邻的设 `contype="0"`）
 
 ## 本章练习
