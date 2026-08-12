@@ -6,8 +6,11 @@
 
 ## 机器人运动学与动力学控制 · 学习计划
 
-> 理论 + MuJoCo 仿真实践，约 10 周（每天 1-2 小时）。
+> **📖 课程主计划：[PLAN.md](PLAN.md)** —— 本 README 的 9 阶段计划已升级并入《Modern Robotics 课程学习与实操指导计划》，以 Coursera 六门课（力学/运动学/动力学/规划/控制/抓取与移动机器人）为主线，每个模块含理论学习 + 上手实操 + 量化验收 + 抗遗忘机制，并新增 6 个实操模块（C-space、闭链、运动规划、抓取、移动机器人、Capstone）。学习流程以 PLAN.md 为准。
+>
+> 理论 + MuJoCo 仿真实践，每天 1-2 小时（时长服从覆盖度，详见 PLAN.md）。
 > 环境：`D:\pyenvs\robotics`（mujoco 3.11 / gymnasium 1.3 / scipy / numpy / matplotlib / torch）。
+> 官方参考库已 clone 至 `modern_robotics_lib/`（gitignore 排除），作手写实现的对照层。
 
 ## 学习方式（重要）
 
@@ -28,6 +31,12 @@
 | 《Modern Robotics》Lynch & Park（Coursera 免费课 + 官网 Python 代码库） | 主教材 |
 | 《机器人学导论》Craig 中文译本 | 查 DH 参数、动力学细节 |
 | MuJoCo 官方文档（Python tutorial） | 实验工具书 |
+
+## MuJoCo 仿真教程指导书
+
+> 进入第 1 阶段前，先读 `mujoco_tutorial/`（基于 mujoco 3.11.0 实测编写，含全部所需 API 与开源项目参考）：
+>
+> 📖 [mujoco_tutorial/README.md](mujoco_tutorial/README.md) — 总览与各阶段对照表
 
 ## 阶段总览
 
@@ -56,6 +65,6 @@
 ## 环境使用
 
 ```bash
-source D:/pyenvs/robotics/Scripts/activate
+D:\pyenvs\robotics\Scripts\Activate.ps1
 python D:/robotics/demo_mujoco.py   # 第 0 课示例：humanoid 可视化
 ```

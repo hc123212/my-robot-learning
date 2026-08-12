@@ -1,6 +1,6 @@
 """MuJoCo 入门第一课：加载模型并实时可视化。
 
-运行: source D:/pyenvs/robotics/Scripts/activate 后 python demo_mujoco.py
+运行: D:\pyenvs\robotics\Scripts\Activate.ps1 后 python demo_mujoco.py
 """
 import os
 import sys

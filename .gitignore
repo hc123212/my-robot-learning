@@ -8,3 +8,9 @@ __pycache__/
 *.tmp
 .DS_Store
 Thumbs.db
+
+# 第三方参考代码库（不提交，仅本地对照用）
+modern_robotics_lib/
+
+# 外部克隆的模型资源仓库（嵌套 git）
+balance_sim_repo/

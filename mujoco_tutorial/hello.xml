@@ -1,0 +1,10 @@
+<!-- 与 hello_mujoco.py 中 XML 字符串一致的模型文件 -->
+<mujoco model="hello">
+  <worldbody>
+    <geom type="plane" size="2 2 0.1"/>          <!-- 地面 -->
+    <body name="ball" pos="0 0 0.3">
+      <joint name="free" type="free"/>            <!-- 6 自由度自由关节 -->
+      <geom type="box" size="0.1 0.1 0.1" mass="1.0"/> <!-- 边长为 0.1m、质量为 1kg 的盒子 -->
+    </body>
+  </worldbody>
+</mujoco>
